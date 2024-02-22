@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbn5lr8jk8ctl"]
+[gd_scene load_steps=4 format=3 uid="uid://cbn5lr8jk8ctl"]
 
 [ext_resource type="Script" path="res://Map/map.gd" id="1_vwedo"]
-[ext_resource type="Texture2D" uid="uid://sh57m24mtlnb" path="res://Map/wall.png" id="2_nka0i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gamx5"]
 size = Vector2(584, 36)
@@ -13,55 +12,57 @@ size = Vector2(42, 669)
 script = ExtResource("1_vwedo")
 
 [node name="Top" type="Area2D" parent="."]
-position = Vector2(1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
-position = Vector2(322, 22)
+position = Vector2(612, 5)
 shape = SubResource("RectangleShape2D_gamx5")
 
-[node name="Wall" type="Sprite2D" parent="Top"]
-position = Vector2(329, 24)
-rotation = 3.14159
-scale = Vector2(0.664, 0.203571)
-texture = ExtResource("2_nka0i")
+[node name="ColorRect" type="ColorRect" parent="Top"]
+offset_left = 320.0
+offset_top = -16.0
+offset_right = 903.0
+offset_bottom = 24.0
+color = Color(1, 0, 1, 1)
 
 [node name="Bottom" type="Area2D" parent="."]
-position = Vector2(0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Bottom"]
+offset_left = 320.0
+offset_top = 624.0
+offset_right = 904.0
+offset_bottom = 656.0
+color = Color(1, 0, 1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
-position = Vector2(322, 657)
+position = Vector2(612, 640)
 shape = SubResource("RectangleShape2D_gamx5")
 
-[node name="Wall" type="Sprite2D" parent="Bottom"]
-position = Vector2(334, 657)
-scale = Vector2(0.661, 0.179337)
-texture = ExtResource("2_nka0i")
-
 [node name="Left" type="Area2D" parent="."]
-position = Vector2(5, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
-position = Vector2(20, 342.5)
+position = Vector2(299, 325.5)
 shape = SubResource("RectangleShape2D_6ojde")
 
-[node name="Wall" type="Sprite2D" parent="Left"]
-position = Vector2(18, 339)
-rotation = -4.71239
-scale = Vector2(0.678142, 0.203571)
-texture = ExtResource("2_nka0i")
+[node name="ColorRect" type="ColorRect" parent="Left"]
+offset_left = 280.0
+offset_top = -16.0
+offset_right = 320.0
+offset_bottom = 664.0
+color = Color(1, 0, 1, 1)
 
 [node name="Right" type="Area2D" parent="."]
-position = Vector2(336, 17)
+position = Vector2(624, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
-position = Vector2(303, 321.5)
+position = Vector2(299, 321.5)
 shape = SubResource("RectangleShape2D_6ojde")
 
-[node name="Wall" type="Sprite2D" parent="Right"]
-position = Vector2(306, 322.071)
-rotation = -4.71239
-scale = Vector2(0.678142, -0.199967)
-texture = ExtResource("2_nka0i")
+[node name="ColorRect" type="ColorRect" parent="Right"]
+offset_left = 280.0
+offset_top = -16.0
+offset_right = 320.0
+offset_bottom = 656.0
+color = Color(1, 0, 1, 1)
 
 [connection signal="body_entered" from="Top" to="." method="_on_top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_bottom_body_entered"]

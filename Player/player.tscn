@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bldblx5oik1th"]
+[gd_scene load_steps=5 format=3 uid="uid://bldblx5oik1th"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_3mqpa"]
+[ext_resource type="Texture2D" uid="uid://od34isjlt2om" path="res://Menu/player_1.png" id="2_b7s4q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pw0og"]
 size = Vector2(253, 20)
@@ -16,11 +17,20 @@ shape = SubResource("RectangleShape2D_pw0og")
 disabled = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -128.0
 offset_top = -8.0
 offset_right = 128.0
 offset_bottom = 8.0
 color = Color(1, 0, 1, 1)
+
+[node name="Texture" type="TextureRect" parent="."]
+offset_left = -128.0
+offset_top = -9.055
+offset_right = 150.0
+offset_bottom = 365.945
+scale = Vector2(0.92, 0.05)
+texture = ExtResource("2_b7s4q")
 
 [node name="Area2D" type="Area2D" parent="."]
 
