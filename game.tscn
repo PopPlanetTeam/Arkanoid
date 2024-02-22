@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://ba525j0e33v2u"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_8eq1u"]
+[ext_resource type="PackedScene" uid="uid://bldblx5oik1th" path="res://Player/player.tscn" id="1_jf1rr"]
+[ext_resource type="PackedScene" uid="uid://cbn5lr8jk8ctl" path="res://Map/map.tscn" id="2_wlss2"]
+[ext_resource type="PackedScene" uid="uid://ddiaywa1ajbbr" path="res://Ball/ball.tscn" id="4_3awtq"]
+[ext_resource type="PackedScene" uid="uid://bufp8jpi0anfx" path="res://Brick/brick.tscn" id="5_bwrxg"]
+[ext_resource type="PackedScene" uid="uid://esxc27j5ntes" path="res://UI/ui.tscn" id="6_f3njj"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_8eq1u")
+
+[node name="Player" parent="." instance=ExtResource("1_jf1rr")]
+unique_name_in_owner = true
+
+[node name="Ball" parent="." instance=ExtResource("4_3awtq")]
+unique_name_in_owner = true
+
+[node name="Map" parent="." instance=ExtResource("2_wlss2")]
+unique_name_in_owner = true
+
+[node name="Brick" parent="." instance=ExtResource("5_bwrxg")]
+unique_name_in_owner = true
+
+[node name="UI" parent="." instance=ExtResource("6_f3njj")]
+unique_name_in_owner = true
