@@ -3,8 +3,8 @@ extends Node2D
 @export var brick_scene: PackedScene
 @export var num_bricks: int = 50
 @export var brick_height: int = 20
-@export var brick_width: int = 100
-@export var grid_margin: int = 45
+@export var brick_width: int
+@export var grid_margin: int = 50
 var bricks: Array
 
 @onready var player = %Player
