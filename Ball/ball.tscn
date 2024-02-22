@@ -1,7 +1,17 @@
-[gd_scene format=3 uid="uid://ddiaywa1ajbbr"]
+[gd_scene load_steps=4 format=3 uid="uid://ddiaywa1ajbbr"]
+
+[ext_resource type="Script" path="res://Ball/ball.gd" id="1_3it37"]
+[ext_resource type="Texture2D" uid="uid://17dohbcatqvu" path="res://Ball/PokeBall.png" id="2_pk4mr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fbdd7"]
 
 [node name="Ball" type="CharacterBody2D"]
+script = ExtResource("1_3it37")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="PokeBall" type="Sprite2D" parent="."]
+position = Vector2(0, 1.19209e-07)
+scale = Vector2(1.52018, 1.41518)
+texture = ExtResource("2_pk4mr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fbdd7")

@@ -13,14 +13,12 @@ brick_scene = ExtResource("5_bwrxg")
 
 [node name="Player" parent="." instance=ExtResource("1_jf1rr")]
 unique_name_in_owner = true
+position = Vector2(596, 539)
 
 [node name="Ball" parent="." instance=ExtResource("4_3awtq")]
 unique_name_in_owner = true
 
 [node name="Map" parent="." instance=ExtResource("2_wlss2")]
-unique_name_in_owner = true
-
-[node name="Brick" parent="." instance=ExtResource("5_bwrxg")]
 unique_name_in_owner = true
 
 [node name="UI" parent="." instance=ExtResource("6_f3njj")]
