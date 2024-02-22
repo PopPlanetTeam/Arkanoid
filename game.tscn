@@ -4,13 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://bldblx5oik1th" path="res://Player/player.tscn" id="1_jf1rr"]
 [ext_resource type="PackedScene" uid="uid://cbn5lr8jk8ctl" path="res://Map/map.tscn" id="2_wlss2"]
 [ext_resource type="PackedScene" uid="uid://ddiaywa1ajbbr" path="res://Ball/ball.tscn" id="4_3awtq"]
-[ext_resource type="PackedScene" uid="uid://bufp8jpi0anfx" path="res://Brick/brick.tscn" id="5_bwrxg"]
 [ext_resource type="PackedScene" uid="uid://esxc27j5ntes" path="res://UI/ui.tscn" id="6_f3njj"]
+[ext_resource type="AudioStream" uid="uid://bcabrtiywyq00" path="res://rubi.mp3" id="6_m866d"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_8eq1u")
-brick_scene = ExtResource("5_bwrxg")
-brick_width = 113
 
 [node name="Player" parent="." instance=ExtResource("1_jf1rr")]
 unique_name_in_owner = true
@@ -25,3 +23,7 @@ unique_name_in_owner = true
 
 [node name="UI" parent="." instance=ExtResource("6_f3njj")]
 unique_name_in_owner = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_m866d")
+autoplay = true
