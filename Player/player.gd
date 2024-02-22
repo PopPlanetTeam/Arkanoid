@@ -3,6 +3,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 
 @onready var ball = %Ball
+@onready var sprite = get_node("TextureRect")
 
 func _physics_process(delta):
 	var direction = handle_input()
@@ -23,3 +24,4 @@ func handle_input() -> int:
 
 func _on_area_2d_body_entered(body):
 	ball.direction.y *= -1
+

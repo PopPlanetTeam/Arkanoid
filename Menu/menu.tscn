@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvd4k6d43p82f"]
+
+[ext_resource type="Script" path="res://Menu/menu.gd" id="1_3jh41"]
+[ext_resource type="Texture2D" uid="uid://bujpu51lw1oh" path="res://Menu/BG.jpg" id="1_mo3ix"]
+[ext_resource type="Texture2D" uid="uid://car64gjaqofro" path="res://Menu/arkanoid.png" id="2_fxagk"]
+[ext_resource type="Texture2D" uid="uid://od34isjlt2om" path="res://Menu/player_1.png" id="3_cjxiv"]
+[ext_resource type="Texture2D" uid="uid://crw3rd8rwqpo4" path="res://Menu/player_2.png" id="4_vq2t6"]
+[ext_resource type="Texture2D" uid="uid://bqxml7tvct3rw" path="res://Menu/player_3.png" id="5_ekvg7"]
+[ext_resource type="Texture2D" uid="uid://bcpss4o6gy5ta" path="res://Menu/player_4.png" id="6_ubb66"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_3jh41")
+
+[node name="BG" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_mo3ix")
+
+[node name="Arkanoid" type="TextureRect" parent="."]
+offset_left = 441.0
+offset_top = 140.0
+offset_right = 711.0
+offset_bottom = 280.0
+texture = ExtResource("2_fxagk")
+
+[node name="player_1" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 500.0
+offset_right = 314.0
+offset_bottom = 551.0
+
+[node name="Texture" type="TextureRect" parent="player_1"]
+layout_mode = 0
+offset_top = 49.435
+offset_right = 278.0
+offset_bottom = 424.435
+rotation = -1.5708
+scale = Vector2(0.185, 0.585)
+texture = ExtResource("3_cjxiv")
+
+[node name="player_2" type="Button" parent="."]
+offset_left = 350.0
+offset_top = 500.0
+offset_right = 564.0
+offset_bottom = 551.0
+
+[node name="Texture" type="TextureRect" parent="player_2"]
+layout_mode = 0
+offset_top = 49.435
+offset_right = 278.0
+offset_bottom = 424.435
+rotation = -1.5708
+scale = Vector2(0.185, 0.585)
+texture = ExtResource("4_vq2t6")
+
+[node name="player_3" type="Button" parent="."]
+offset_left = 600.0
+offset_top = 500.0
+offset_right = 814.0
+offset_bottom = 551.0
+
+[node name="Texture" type="TextureRect" parent="player_3"]
+layout_mode = 0
+offset_top = 49.435
+offset_right = 278.0
+offset_bottom = 424.435
+rotation = -1.5708
+scale = Vector2(0.185, 0.585)
+texture = ExtResource("5_ekvg7")
+
+[node name="player_4" type="Button" parent="."]
+offset_left = 850.0
+offset_top = 500.0
+offset_right = 1064.0
+offset_bottom = 551.0
+
+[node name="Texture" type="TextureRect" parent="player_4"]
+layout_mode = 0
+offset_top = 49.435
+offset_right = 278.0
+offset_bottom = 424.435
+rotation = -1.5708
+scale = Vector2(0.185, 0.585)
+texture = ExtResource("6_ubb66")
+
+[connection signal="pressed" from="player_1" to="." method="_on_player_1_pressed"]
+[connection signal="pressed" from="player_2" to="." method="_on_player_2_pressed"]
+[connection signal="pressed" from="player_3" to="." method="_on_player_3_pressed"]
+[connection signal="pressed" from="player_4" to="." method="_on_player_4_pressed"]
