@@ -35,7 +35,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
+	
 func new_game():
 	score = 0
 	generate_brick_grid()
@@ -59,3 +59,4 @@ func break_brick():
 func update_score_label():
 	#$score_label.text = str(score)
 	pass
+

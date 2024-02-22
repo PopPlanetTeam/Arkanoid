@@ -17,6 +17,7 @@ position = Vector2(596, 539)
 
 [node name="Ball" parent="." instance=ExtResource("4_3awtq")]
 unique_name_in_owner = true
+position = Vector2(603, 489)
 
 [node name="Map" parent="." instance=ExtResource("2_wlss2")]
 unique_name_in_owner = true
