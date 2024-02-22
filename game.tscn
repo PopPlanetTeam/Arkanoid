@@ -9,6 +9,7 @@
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_8eq1u")
+brick_scene = ExtResource("5_bwrxg")
 
 [node name="Player" parent="." instance=ExtResource("1_jf1rr")]
 unique_name_in_owner = true
