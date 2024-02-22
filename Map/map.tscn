@@ -14,44 +14,44 @@ script = ExtResource("1_vwedo")
 [node name="Top" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
-position = Vector2(612, 5)
+position = Vector2(333, 22)
 shape = SubResource("RectangleShape2D_gamx5")
 
 [node name="ColorRect" type="ColorRect" parent="Top"]
-offset_left = 320.0
-offset_top = -16.0
-offset_right = 903.0
-offset_bottom = 24.0
+offset_left = 41.0
+offset_top = 1.0
+offset_right = 624.0
+offset_bottom = 41.0
 color = Color(1, 0, 1, 1)
 
 [node name="Bottom" type="Area2D" parent="."]
 
 [node name="ColorRect2" type="ColorRect" parent="Bottom"]
-offset_left = 320.0
-offset_top = 624.0
-offset_right = 904.0
-offset_bottom = 656.0
+offset_left = 41.0
+offset_top = 641.0
+offset_right = 625.0
+offset_bottom = 673.0
 color = Color(1, 0, 1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
-position = Vector2(612, 640)
+position = Vector2(333, 657)
 shape = SubResource("RectangleShape2D_gamx5")
 
 [node name="Left" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
-position = Vector2(299, 325.5)
+position = Vector2(20, 342.5)
 shape = SubResource("RectangleShape2D_6ojde")
 
 [node name="ColorRect" type="ColorRect" parent="Left"]
-offset_left = 280.0
-offset_top = -16.0
-offset_right = 320.0
-offset_bottom = 664.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 41.0
+offset_bottom = 681.0
 color = Color(1, 0, 1, 1)
 
 [node name="Right" type="Area2D" parent="."]
-position = Vector2(624, 0)
+position = Vector2(345, 17)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
 position = Vector2(299, 321.5)
