@@ -4,7 +4,7 @@ extends Node2D
 @export var num_bricks: int = 50
 @export var brick_height: int = 20
 @export var brick_width: int = 100
-@export var grid_margin: int = 10
+@export var grid_margin: int = 45
 var bricks: Array
 
 @onready var player = %Player
@@ -41,9 +41,10 @@ func new_game():
 	generate_brick_grid()
 
 func generate_brick_grid() -> void:
-	var max_bricks_per_row: int = screen_size.x / brick_width
+	var max_bricks_per_row: int = (screen_size.x - 2 * grid_margin) / brick_width
+	print(max_bricks_per_row)
 	for i in range(num_bricks):
-		generate_brick(Vector2((i % max_bricks_per_row) * brick_width, int(i / max_bricks_per_row) * brick_height))
+		generate_brick(Vector2((i % max_bricks_per_row) * brick_width + grid_margin, int(i / max_bricks_per_row) * brick_height + grid_margin))
 
 func generate_brick(pos: Vector2) -> void:
 	var brick = brick_scene.instantiate()
