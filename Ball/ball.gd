@@ -14,6 +14,6 @@ func _physics_process(delta):
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, speed)
 		
-	rotation += 0.7
+	rotation += 0.3
 	
 	move_and_slide()    

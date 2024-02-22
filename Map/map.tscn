@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbn5lr8jk8ctl"]
+[gd_scene load_steps=7 format=3 uid="uid://cbn5lr8jk8ctl"]
 
 [ext_resource type="Script" path="res://Map/map.gd" id="1_vwedo"]
+[ext_resource type="Texture2D" uid="uid://bxlotn3p3gn1x" path="res://Map/backgound.jpg" id="2_qjhkq"]
+[ext_resource type="Texture2D" uid="uid://k3wv6n43fnbl" path="res://Map/horizontal_wall.jpg" id="3_0176h"]
+[ext_resource type="Texture2D" uid="uid://bon8123jlr6d3" path="res://Map/vertical_wall.jpg" id="4_7m6vm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gamx5"]
 size = Vector2(584, 36)
@@ -10,6 +13,18 @@ size = Vector2(42, 669)
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_vwedo")
+
+[node name="background" type="Node2D" parent="."]
+
+[node name="Texture" type="TextureRect" parent="background"]
+modulate = Color(0.901961, 0, 0.592157, 1)
+offset_left = 944.305
+offset_top = -16.235
+offset_right = 1680.31
+offset_bottom = 397.765
+rotation = 1.5708
+scale = Vector2(0.915, 1.61)
+texture = ExtResource("2_qjhkq")
 
 [node name="Top" type="Area2D" parent="."]
 
@@ -24,6 +39,14 @@ offset_right = 903.0
 offset_bottom = 24.0
 color = Color(1, 0, 1, 1)
 
+[node name="Texture" type="TextureRect" parent="Top"]
+offset_left = 279.0
+offset_top = -17.0
+offset_right = 941.0
+offset_bottom = 131.0
+scale = Vector2(1, 0.28)
+texture = ExtResource("3_0176h")
+
 [node name="Bottom" type="Area2D" parent="."]
 
 [node name="ColorRect2" type="ColorRect" parent="Bottom"]
@@ -36,6 +59,14 @@ color = Color(1, 0, 1, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
 position = Vector2(612, 640)
 shape = SubResource("RectangleShape2D_gamx5")
+
+[node name="Texture" type="TextureRect" parent="Bottom"]
+offset_left = 279.0
+offset_top = 613.245
+offset_right = 941.0
+offset_bottom = 761.245
+scale = Vector2(1, 0.28)
+texture = ExtResource("3_0176h")
 
 [node name="Left" type="Area2D" parent="."]
 
@@ -50,6 +81,46 @@ offset_right = 320.0
 offset_bottom = 664.0
 color = Color(1, 0, 1, 1)
 
+[node name="Texture_1" type="TextureRect" parent="Left"]
+offset_left = 280.395
+offset_top = -16.46
+offset_right = 324.395
+offset_bottom = 131.54
+scale = Vector2(0.895, 1)
+texture = ExtResource("4_7m6vm")
+
+[node name="Texture_2" type="TextureRect" parent="Left"]
+offset_left = 280.395
+offset_top = 125.0
+offset_right = 324.395
+offset_bottom = 273.0
+scale = Vector2(0.895, 1)
+texture = ExtResource("4_7m6vm")
+
+[node name="Texture_3" type="TextureRect" parent="Left"]
+offset_left = 280.395
+offset_top = 266.0
+offset_right = 324.395
+offset_bottom = 414.0
+scale = Vector2(0.895, 1)
+texture = ExtResource("4_7m6vm")
+
+[node name="Texture_4" type="TextureRect" parent="Left"]
+offset_left = 280.395
+offset_top = 410.0
+offset_right = 324.395
+offset_bottom = 558.0
+scale = Vector2(0.895, 1)
+texture = ExtResource("4_7m6vm")
+
+[node name="Texture_5" type="TextureRect" parent="Left"]
+offset_left = 280.395
+offset_top = 554.0
+offset_right = 324.395
+offset_bottom = 702.0
+scale = Vector2(0.895, 0.735)
+texture = ExtResource("4_7m6vm")
+
 [node name="Right" type="Area2D" parent="."]
 position = Vector2(624, 0)
 
@@ -63,6 +134,46 @@ offset_top = -16.0
 offset_right = 320.0
 offset_bottom = 656.0
 color = Color(1, 0, 1, 1)
+
+[node name="Texture_1" type="TextureRect" parent="Right"]
+offset_left = 280.395
+offset_top = -16.46
+offset_right = 324.395
+offset_bottom = 131.54
+scale = Vector2(0.895, 1)
+texture = ExtResource("4_7m6vm")
+
+[node name="Texture_2" type="TextureRect" parent="Right"]
+offset_left = 280.395
+offset_top = 125.0
+offset_right = 324.395
+offset_bottom = 273.0
+scale = Vector2(0.895, 1)
+texture = ExtResource("4_7m6vm")
+
+[node name="Texture_3" type="TextureRect" parent="Right"]
+offset_left = 280.395
+offset_top = 266.0
+offset_right = 324.395
+offset_bottom = 414.0
+scale = Vector2(0.895, 1)
+texture = ExtResource("4_7m6vm")
+
+[node name="Texture_4" type="TextureRect" parent="Right"]
+offset_left = 280.395
+offset_top = 410.0
+offset_right = 324.395
+offset_bottom = 558.0
+scale = Vector2(0.895, 1)
+texture = ExtResource("4_7m6vm")
+
+[node name="Texture_5" type="TextureRect" parent="Right"]
+offset_left = 280.395
+offset_top = 554.0
+offset_right = 324.395
+offset_bottom = 702.0
+scale = Vector2(0.895, 0.735)
+texture = ExtResource("4_7m6vm")
 
 [connection signal="body_entered" from="Top" to="." method="_on_top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_bottom_body_entered"]

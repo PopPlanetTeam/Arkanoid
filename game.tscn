@@ -10,6 +10,12 @@
 [node name="Game" type="Node2D"]
 script = ExtResource("1_8eq1u")
 
+[node name="Map" parent="." instance=ExtResource("2_wlss2")]
+unique_name_in_owner = true
+
+[node name="Mask" type="CanvasModulate" parent="."]
+color = Color(0.101961, 0.0980392, 0.0980392, 0.607843)
+
 [node name="Player" parent="." instance=ExtResource("1_jf1rr")]
 unique_name_in_owner = true
 position = Vector2(596, 539)
@@ -17,9 +23,6 @@ position = Vector2(596, 539)
 [node name="Ball" parent="." instance=ExtResource("4_3awtq")]
 unique_name_in_owner = true
 position = Vector2(603, 489)
-
-[node name="Map" parent="." instance=ExtResource("2_wlss2")]
-unique_name_in_owner = true
 
 [node name="UI" parent="." instance=ExtResource("6_f3njj")]
 unique_name_in_owner = true

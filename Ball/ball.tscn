@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddiaywa1ajbbr"]
+[gd_scene load_steps=5 format=3 uid="uid://ddiaywa1ajbbr"]
 
 [ext_resource type="Script" path="res://Ball/ball.gd" id="1_3it37"]
 [ext_resource type="Texture2D" uid="uid://17dohbcatqvu" path="res://Ball/PokeBall.png" id="2_pk4mr"]
+[ext_resource type="Texture2D" uid="uid://cfwdktyqqh403" path="res://Ball/light.png" id="3_670sr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fbdd7"]
 
@@ -15,3 +16,9 @@ texture = ExtResource("2_pk4mr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_fbdd7")
+
+[node name="Light" type="PointLight2D" parent="."]
+color = Color(0, 0.560784, 0.560784, 1)
+energy = 2.5
+texture = ExtResource("3_670sr")
+texture_scale = 3.0
