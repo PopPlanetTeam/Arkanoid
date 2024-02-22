@@ -15,7 +15,15 @@ var screen_size: Vector2i
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	"""
+	screen_size = get_window().size
+	new_game()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+	
+func new_game():
+	score = 0
 	var loaded_brick = preload("res://Brick/brick.tscn")
 	var y_start = 40
 	var x_start = 400
@@ -28,17 +36,7 @@ func _ready():
 			x_start += 100
 		x_start = 400
 		y_start += 35
-	"""
-	screen_size = get_window().size
-	new_game()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-	
-func new_game():
-	score = 0
-	generate_brick_grid()
+	#generate_brick_grid()
 
 func generate_brick_grid() -> void:
 	var max_bricks_per_row: int = (screen_size.x - 2 * grid_margin) / brick_width

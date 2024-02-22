@@ -3,6 +3,14 @@ extends CharacterBody2D
 const SPEED = 300.0
 
 @onready var ball = %Ball
+@onready var sprite = $Texture
+
+func _ready():
+	var path = "res://data/info.json"
+	var file = FileAccess.open(path, FileAccess.READ)
+	var json = JSON.new()
+	var dados = json.parse_string(file.get_as_text())
+	change_sprite(dados.id)
 
 func _physics_process(delta):
 	var direction = handle_input()
@@ -23,3 +31,17 @@ func handle_input() -> int:
 
 func _on_area_2d_body_entered(body):
 	ball.direction.y *= -1
+	
+func change_sprite(sprite_id):
+	if sprite_id == 0:
+			sprite.texture = preload("res://Menu/player_1.png")
+			print("Sprite ", sprite_id)
+	elif sprite_id == 1:
+			sprite.texture = preload("res://Menu/player_2.png")
+			print("Sprite ", sprite_id)
+	elif sprite_id == 2:
+			sprite.texture = preload("res://Menu/player_3.png")
+			print("Sprite ", sprite_id)
+	else:
+			sprite.texture = preload("res://Menu/player_4.png")
+			print("Sprite ", sprite_id)
