@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8q0fpcpv11d7"]
+
+[ext_resource type="Texture2D" uid="uid://dkcgmrcirjbfd" path="res://game_over.png" id="1_x25bd"]
+
+[node name="GameOver" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.8297, 16.1642)
+color = Color(0.0235294, 0.0235294, 0.0235294, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 77.0
+offset_top = 293.0
+offset_right = 1094.0
+offset_bottom = 532.0
+text = "O mundo não é um mar de rosas; é um lugar sujo, um lugar cruel, que não quer saber o quanto você é durão. Vai botar você de joelhos e você vai ficar de joelhos para sempre se você deixar. Você, eu, ninguém vai bater tão forte como a vida, mas não se trata de bater forte. Se trata de quanto você aguenta apanhar e seguir em frente, o quanto você é capaz de aguentar e continuar tentando. É assim que se consegue vencer.
+
+Agora se você sabe do teu valor, então vá atrás do que você merece, mas tem que estar preparado para apanhar. E nada de apontar dedos, dizer que você não consegue por causa dele ou dela, ou de quem quer que seja. Só covardes fazem isso e você não é covarde, você é melhor que isso.
+
+(Discurso do filme Rocky Balboa para o seu filho)"
+tab_size = 6
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 503.0
+offset_top = 193.0
+offset_right = 703.0
+offset_bottom = 233.0
+size_flags_stretch_ratio = 8.1
+text = "Voce Perdeu"
+
+[node name="GameOver" type="Sprite2D" parent="."]
+position = Vector2(579, 151.75)
+scale = Vector2(0.96875, 0.44707)
+texture = ExtResource("1_x25bd")
