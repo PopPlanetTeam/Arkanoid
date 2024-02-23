@@ -1,9 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbn5lr8jk8ctl"]
+[gd_scene load_steps=10 format=3 uid="uid://cbn5lr8jk8ctl"]
 
 [ext_resource type="Script" path="res://Map/map.gd" id="1_vwedo"]
 [ext_resource type="Texture2D" uid="uid://bxlotn3p3gn1x" path="res://Map/backgound.jpg" id="2_qjhkq"]
 [ext_resource type="Texture2D" uid="uid://k3wv6n43fnbl" path="res://Map/horizontal_wall.jpg" id="3_0176h"]
 [ext_resource type="Texture2D" uid="uid://bon8123jlr6d3" path="res://Map/vertical_wall.jpg" id="4_7m6vm"]
+[ext_resource type="Texture2D" uid="uid://cptlcfk0dgq8m" path="res://Map/wall.jpg" id="5_qjlpj"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ho1kq"]
+texture = ExtResource("5_qjlpj")
+0:0/size_in_atlas = Vector2i(4, 2)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-31.8198, -15.9099, 31.643, -16.2635, 31.8198, 16.4402, -32.1734, 16.617)
+6:0/size_in_atlas = Vector2i(3, 5)
+6:0/0 = 0
+6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:0/0/physics_layer_0/angular_velocity = 0.0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24.25, -39.75, 24.25, -40, 23.75, 39.5, -24, 39.75)
+
+[sub_resource type="TileSet" id="TileSet_sr3wd"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ho1kq")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gamx5"]
 size = Vector2(584, 36)
@@ -13,6 +31,13 @@ size = Vector2(42, 669)
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_vwedo")
+
+[node name="Tile" type="TileMap" parent="."]
+position = Vector2(148.615, 0)
+scale = Vector2(0.51, 1)
+tile_set = SubResource("TileSet_sr3wd")
+format = 2
+layer_0/tile_data = PackedInt32Array(2359313, 393216, 0, 2097169, 393216, 0, 1835025, 393216, 0, 2359391, 393216, 0, 2097247, 393216, 0, 1900639, 393216, 0)
 
 [node name="background" type="Node2D" parent="."]
 

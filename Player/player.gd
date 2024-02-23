@@ -4,6 +4,8 @@ const SPEED = 300.0
 
 @onready var ball = %Ball
 @onready var sprite = $Texture
+@onready var wall_ray_left = $wall_ray_left
+@onready var wall_ray_right = $wall_ray_right
 
 func _ready():
 	var path = "res://data/info.json"
@@ -14,7 +16,7 @@ func _ready():
 
 func _physics_process(delta):
 	var direction = handle_input()
-
+	
 	if direction:
 		velocity.x = direction * SPEED
 	else:
@@ -24,8 +26,8 @@ func _physics_process(delta):
 	move_and_slide()
 
 func handle_input() -> int:
-	if Input.is_key_pressed(KEY_LEFT): return -1
-	elif Input.is_key_pressed(KEY_RIGHT): return 1
+	if Input.is_key_pressed(KEY_LEFT) and not wall_ray_left.is_colliding(): return -1
+	elif Input.is_key_pressed(KEY_RIGHT) and not wall_ray_right.is_colliding(): return 1
 	return 0 
 
 
