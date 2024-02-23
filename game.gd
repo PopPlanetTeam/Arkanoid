@@ -1,7 +1,8 @@
 extends Node2D
 
 @export var brick_scene: PackedScene
-@export var num_bricks: int = 50
+@export var button_scene: PackedScene
+@export var num_bricks: int = 20
 @export var brick_height: int = 20
 @export var brick_width: int
 @export var grid_margin: int = 50
@@ -9,6 +10,9 @@ var bricks: Array
 
 @onready var player = %Player
 var score: int
+
+@onready var score_label = get_node("UI/Label")
+@onready var ball = get_node("Ball")
 
 var screen_size: Vector2i
 @onready var map = %Map
@@ -56,6 +60,11 @@ func break_brick():
 	score += 1
 	
 func update_score_label():
-	#$score_label.text = str(score)
-	pass
+	score_label.text = str(score)
+	if score >= num_bricks:
+		score_label.text = "WINNER!"
+		ball.queue_free()
+		var button = button_scene.instantiate()
+		add_child(button)
+	
 

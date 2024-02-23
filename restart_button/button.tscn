@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg4v4je20a8tw"]
+
+[ext_resource type="Script" path="res://restart_button/button.gd" id="1_k64xc"]
+
+[node name="Button" type="Button"]
+offset_left = 439.0
+offset_top = 545.0
+offset_right = 785.0
+offset_bottom = 615.0
+text = "Reiniciar"
+script = ExtResource("1_k64xc")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

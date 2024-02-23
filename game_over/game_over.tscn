@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8q0fpcpv11d7"]
+[gd_scene load_steps=3 format=3 uid="uid://b8q0fpcpv11d7"]
 
-[ext_resource type="Texture2D" uid="uid://dkcgmrcirjbfd" path="res://game_over.png" id="1_x25bd"]
+[ext_resource type="Texture2D" uid="uid://dkcgmrcirjbfd" path="res://game_over/game_over.png" id="2_ndw43"]
+[ext_resource type="PackedScene" uid="uid://cg4v4je20a8tw" path="res://restart_button/button.tscn" id="3_yokhx"]
 
 [node name="GameOver" type="Node2D"]
 
@@ -33,4 +34,6 @@ text = "Voce Perdeu"
 [node name="GameOver" type="Sprite2D" parent="."]
 position = Vector2(579, 151.75)
 scale = Vector2(0.96875, 0.44707)
-texture = ExtResource("1_x25bd")
+texture = ExtResource("2_ndw43")
+
+[node name="Button" parent="." instance=ExtResource("3_yokhx")]
