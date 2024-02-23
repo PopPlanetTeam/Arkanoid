@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8q0fpcpv11d7"]
+[gd_scene load_steps=4 format=3 uid="uid://b8q0fpcpv11d7"]
 
 [ext_resource type="Texture2D" uid="uid://dkcgmrcirjbfd" path="res://game_over/game_over.png" id="2_ndw43"]
+[ext_resource type="AudioStream" uid="uid://cc563fi5w7mhl" path="res://game_over/caneta_azul_remix.mp3" id="3_rdnoo"]
 [ext_resource type="PackedScene" uid="uid://cg4v4je20a8tw" path="res://restart_button/button.tscn" id="3_yokhx"]
 
 [node name="GameOver" type="Node2D"]
@@ -37,3 +38,7 @@ scale = Vector2(0.96875, 0.44707)
 texture = ExtResource("2_ndw43")
 
 [node name="Button" parent="." instance=ExtResource("3_yokhx")]
+
+[node name="Loser" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rdnoo")
+autoplay = true
