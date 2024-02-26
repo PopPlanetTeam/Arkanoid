@@ -26,24 +26,29 @@ func _physics_process(delta):
 	move_and_slide()
 
 func handle_input() -> int:
-	if Input.is_key_pressed(KEY_LEFT) and not wall_ray_left.is_colliding(): return -1
-	elif Input.is_key_pressed(KEY_RIGHT) and not wall_ray_right.is_colliding(): return 1
+	if Input.is_action_pressed("left") and not wall_ray_left.is_colliding(): return -1
+	elif Input.is_action_pressed("right") and not wall_ray_right.is_colliding(): return 1
 	return 0 
-
-
-func _on_area_2d_body_entered(body):
-	ball.direction.y *= -1
+	
 	
 func change_sprite(sprite_id):
 	if sprite_id == 0:
 			sprite.texture = preload("res://Menu/player_1.png")
-			print("Sprite ", sprite_id)
 	elif sprite_id == 1:
 			sprite.texture = preload("res://Menu/player_2.png")
-			print("Sprite ", sprite_id)
 	elif sprite_id == 2:
 			sprite.texture = preload("res://Menu/player_3.png")
-			print("Sprite ", sprite_id)
 	else:
 			sprite.texture = preload("res://Menu/player_4.png")
-			print("Sprite ", sprite_id)
+
+
+func _on_central_area_body_entered(body):
+	ball.direction.y *= -1
+
+func _on_left_area_body_entered(body):
+	if ball.velocity.x > 0:
+		ball.direction.x *= -1
+		
+func _on_right_area_body_entered(body):
+	if ball.velocity.x < 0:
+		ball.direction.x *= -1
