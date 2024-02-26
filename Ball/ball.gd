@@ -6,7 +6,7 @@ extends CharacterBody2D
 func _ready():
 	speed = 300
 	direction.x = [1,-1].pick_random()
-	direction.y = [1,-1].pick_random()
+	direction.y = -1
 
 func _physics_process(delta):
 	if direction:
